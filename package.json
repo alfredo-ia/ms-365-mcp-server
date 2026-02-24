@@ -1,5 +1,5 @@
 {
-  "name": "@softeria/ms-365-mcp-server",
+  "name": "@alfredo-ia/ms-365-mcp-server",
   "version": "0.0.0-development",
   "description": " A Model Context Protocol (MCP) server for interacting with Microsoft 365 and Office services through the Graph API",
   "type": "module",
@@ -19,7 +19,9 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "verify": "npm run generate && npm run lint && npm run format:check && npm run build && npm run test",
-    "inspector": "npx @modelcontextprotocol/inspector tsx src/index.ts"
+    "inspector": "npx @modelcontextprotocol/inspector tsx src/index.ts",
+    "prepare": "npm run build",
+    "prepack": "npm run build"
   },
   "keywords": [
     "microsoft",
@@ -30,7 +32,7 @@
   "author": "",
   "license": "MIT",
   "publishConfig": {
-    "access": "public"
+    "access": "restricted"
   },
   "dependencies": {
     "@azure/msal-node": "^3.8.0",
@@ -73,6 +75,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/softeria/ms-365-mcp-server.git"
+    "url": "https://github.com/alfredo-ia/ms-365-mcp-server.git"
   }
 }
